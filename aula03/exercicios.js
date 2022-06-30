@@ -39,4 +39,3 @@ if (num01 % num02 === 0 || num02 % num01 === 0) {
 } else {
     console.log(`\nOs números ${num01} e ${num02} não são multiplos! `);
 }
-
