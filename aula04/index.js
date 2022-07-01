@@ -31,36 +31,22 @@ const prompt = require('prompt-sync')();
 
 console.log();
 const antigoSal = +prompt(`Por favor, digito o salário do colaborador: `);
-
+let ajuste;
+cons
 if (antigoSal > 1500) {
-    const novoSal = antigoSal + antigoSal * 0.05;
-    console.log(`\nO salário antes do reajuste: ${antigoSal} reais.`);
-    console.log(`O percentual de aumento aplicado: 5%.`);
-    console.log(`O valor do aumento: ` + antigoSal * 0.05 + ` reais.`);
-    console.log(`O novo salário, após o aumento: ${novoSal} reais.`);
-    console.log();
+    ajuste = 0.05;
 } else if (antigoSal >= 700 && antigoSal < 1500) {
-    const novoSal = antigoSal + antigoSal * 0.1;
-    console.log();
-    console.log(`\nO salário antes do reajuste: ${antigoSal} reais.`);
-    console.log(`O percentual de aumento aplicado: 10%.`);
-    console.log(`O valor do aumento: ` + antigoSal * 0.1 + ` reais.`);
-    console.log(`O novo salário, após o aumento: ${novoSal} reais.`);
-    console.log();
+    ajuste = 0.1;
 } else if (antigoSal > 280 && antigoSal < 700) {
-    const novoSal = antigoSal + antigoSal * 0.15;
-    console.log();
-    console.log(`\nO salário antes do reajuste: ${antigoSal} reais.`);
-    console.log(`O percentual de aumento aplicado: 15%.`);
-    console.log(`O valor do aumento: ` + antigoSal * 0.15 + ` reais.`);
-    console.log(`O novo salário, após o aumento: ${novoSal} reais.`);
-    console.log();
+    ajuste = 0.15;
 } else {
-    const novoSal = antigoSal + antigoSal * 0.2;
-    console.log();
-    console.log(`\nO salário antes do reajuste: ${antigoSal} reais.`);
-    console.log(`O percentual de aumento aplicado: 20%.`);
-    console.log(`O valor do aumento: ` + antigoSal * 0.2 + ` reais.`);
-    console.log(`O novo salário, após o aumento: ${novoSal} reais.`);
-    console.log();
+    ajuste = 0.2;
 }
+
+const novoSal = antigoSal + antigoSal * ajuste;
+
+console.log(`\nO salário antes do reajuste: ${antigoSal} reais.`);
+console.log(`O percentual de aumento aplicado: ${ajuste * 100}%.`);
+console.log(`O valor do aumento: ` + antigoSal * ajuste + ` reais.`);
+console.log(`O novo salário, após o aumento: ${novoSal} reais.`);
+console.log();
