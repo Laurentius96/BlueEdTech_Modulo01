@@ -18,7 +18,6 @@ const prompt = require('prompt-sync')();
 
  */
 
-
 let num = 0;
 
 while (num <= 5) {
@@ -36,6 +35,15 @@ while (texte01 <= 10) {
 }
 console.log();
 
+// exemplo de um validação
+let resposta = prompt('Digite sua resposta:').toLowerCase().trim();
+while (resposta !== 'sim' || resposta !== 'nao') {
+    console.log('\nResposta Inválida!');
+    resposta
+}
+console.log();
+console.log(`Resposta Correta!`);
+
 /** Do... while:
  
   * While:
@@ -48,9 +56,15 @@ console.log();
         
         1) Depois da execução a condição é avaliada, caso true volta para o passo 1, caso false encerra a repetição.
 
-        2) Quando a condição retorna false, a declaração é ignorada.
+        2) A execução do laço é encerrada ao avaliar a condição como false.
     
-    A sintaxe é bastante simples, semelhante ao que vimos no if:
+    Essa estrutura é especialmente útil quando temos um código que precisa ser executado pelo menos uma vez, independente do resultado da condição:
     
 
  */
+
+let senha = '';
+
+do {
+    senha = prompt('Digite a senha de acesso: ');
+} while (senha !== 'Blue');
