@@ -219,8 +219,37 @@ console.log(filmes08); // ["Forrest Gump", "Interestelar", "Titanic", "Harry Pot
 É uma função que preenche todos valores do array a partir do índince inicial a um índice final. 
 
 Esse método recebe 3 parâmetros, sendo que:
-O 1º parâmetro é o valor que vai preencher a lista;
-O 2º parâmetro (opcional) é o índice onde ela vai começar a substituição dos elementos;
-O 3º parâmetro (opcional) é o índice que indica até onde eles devem ser substituídos (o índice passado não é afetado, ele substituiu até o anterior a ele).
+  
+   1º parâmetro é o valor que vai preencher a lista;
+   2º parâmetro (opcional) é o índice onde ela vai começar a substituição dos elementos;
+   3º parâmetro (opcional) é o índice que indica até onde eles devem ser substituídos (o índice passado não é afetado, ele substituiu até o anterior a ele).
 
 */
+
+console.log(`\nExemplo 10 - .fill()`);
+const filmes09 = [
+    'Jumanji',
+    'Mad Max',
+    'Titanic',
+    'Harry Potter',
+    'Interestelar',
+];
+
+// Preenche a lista com "Mad Max" a partir do índice 1, parando quando
+// chegar antes no índice 4, portanto, no índice 3
+filmes09.fill('Mad Max', 1, 4);
+
+console.log(filmes09); // ["Jumanji", "Mad Max", "Mad Max", "Mad Max", "Interestelar"]
+
+//// .sorf() - é uma função que ordena os elementos são permanentente trocados para a nova posição.
+
+console.log(`\nExemplo 11 - .sort()`);
+const filmes10 = ['Mad Max', 'Titanic', 'Jumanji', 'Aquaman'];
+filmes10.sort();
+
+//// .reserse() - é uma função que inverte a ordem dos elementos de um array.
+
+console.log(`\nExemplo 12 - .reserve()`);
+const filmes11 = ['Mad Max', 'Titanic', 'Jumanji', 'Aquaman'];
+filmes11.reverse();
+console.log(filmes11); // ["Aquaman", "Jumanji", "Titanic", "Mad Max"]
