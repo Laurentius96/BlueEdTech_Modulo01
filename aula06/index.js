@@ -153,3 +153,74 @@ console.log(filmes04); // ["Jumanji", "Mad Max", "Interestelar"]
 const filmeRemovido04 = filmes04.shift(); // Remove o filme "Jumanji"
 console.log(filmes04); // ["Mad Max", "Interestelar"]
 console.log(filmeRemovido04); // "Jumanji"
+
+/* .splice() 
+
+É uma função que altera o conteúdo de uma lista, podendo ao mesmo tempo adicionar, remover ou substituir os elementos que estão lá dentro.
+
+Essa função recebe 3 parâmetros, sendo que:
+
+  1º parâmetro indica o índice a partir de onde o splice será "aplicado";
+  2º parâmetro (opcional) indica a quantidade de itens a serem removidos;
+  3º parâmetro em diante (opcional) passa os novos elementos a serem adicionados;
+  
+  Caso o 2º parâmetro não seja especificado, ou seja, a função recebe apenas o índice (1º parâmetro), todos os elementos a partir deste índice passado serão removidos.
+  
+  Caso o 2º parâmetro seja 0, nenhum elemento será removido do array, portanto, pelo menos um novo elemento (3º parâmetro) deve ser especificado, sendo que ele apenas será adicionado.
+  
+  Caso o 2º parâmetro seja maior que 0, ele vai deletar essa quantidade de elementos, e eles podem ser substituídos pelos elementos passados como 3º parâmetro (caso tenham sido passados, se o 3º parâmetro não for especificado, ele apenas remove os itens).
+  
+  */
+
+//// Exemplo 1 - apenas 1º parâmetro:
+console.log(`\nExemplo 09 - .shift(), passando pelo 1º parâmetro:`);
+const filmes05 = ['Forrest Gump', 'Interestelar', 'Jumanji', 'Mad Max'];
+
+// Remove todos os elementos a partir do índice 2 em diante
+const filmesRemovidos05 = filmes05.splice(2);
+console.log(filmesRemovidos05); // ["Jumanji", "Mad Max"]
+console.log(filmes05); // ["Forrest Gump", "Interestelar"]
+
+//// Exemplo 2 - passando 1º e 2º parâmetro:
+console.log(`\nPassando 1º e 2º parâmetro:`);
+const filmes06 = ['Forrest Gump', 'Interestelar', 'Jumanji', 'Mad Max'];
+
+// A partir do índice 2, remove 1 elemento, portanto, apenas o item de índice 2
+const filmesRemovidos06 = filmes06.splice(2, 1);
+console.log(filmesRemovidos06); // ["Jumanji"]
+
+console.log(filmes06); // ["Forrest Gump", "Interestelar", "Mad Max"]
+
+//// Exemplo 3 - passando 1º, 2º e 3º parâmetro:
+console.log(`\nPassando 1º, 2° e 3º parâmetro:`);
+const filmes07 = ['Forrest Gump', 'Interestelar', 'Jumanji', 'Mad Max'];
+
+// A partir do índice 2, remove 1 elemento, portanto, apenas o item de índice 2
+// Feito isso, insere o elemento do 3º parâmetro
+const filmesRemovidos07 = filmes07.splice(2, 1, 'Titanic');
+console.log(filmesRemovidos07); // ["Jumanji"]
+
+console.log(filmes07); // ["Forrest Gump", "Interestelar", "Titanic", "Mad Max"]
+
+//// Exemplo 4 - passando mais parâmetros após o 3º parâmetro:o
+console.log(`\nPassando mais parâmetros após o 3º parâmetro:`);
+const filmes08 = ['Forrest Gump', 'Interestelar', 'Jumanji', 'Mad Max'];
+
+// A partir do índice 2, remove 1 elemento, portanto, apenas o item de índice 2
+// Feito isso, insere os elementos a partir do 3º parâmetro
+// Podemos passar infinitos parâmetros que todos serão adicionados
+const filmesRemovidos08 = filmes08.splice(2, 1, 'Titanic', 'Harry Potter');
+console.log(filmesRemovidos08); // ["Jumanji"]
+
+console.log(filmes08); // ["Forrest Gump", "Interestelar", "Titanic", "Harry Potter", "Mad Max" ]
+
+/* .fill() 
+
+É uma função que preenche todos valores do array a partir do índince inicial a um índice final. 
+
+Esse método recebe 3 parâmetros, sendo que:
+O 1º parâmetro é o valor que vai preencher a lista;
+O 2º parâmetro (opcional) é o índice onde ela vai começar a substituição dos elementos;
+O 3º parâmetro (opcional) é o índice que indica até onde eles devem ser substituídos (o índice passado não é afetado, ele substituiu até o anterior a ele).
+
+*/
