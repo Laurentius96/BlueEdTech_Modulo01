@@ -13,56 +13,78 @@ const prompt = require('prompt-sync')();
  */
 
 //// 4)
+// console.log(`\nQuantas vezes você quer lançar o dado?`);
+// const vezes = +prompt(`R: `);
+// console.log();
 
-console.log(`\nQuantas vezes você quer lançar o dado?`);
-const vezes = +prompt(`R: `);
+// let contador = 1;
+// let soma01 = 0;
+// let soma02 = 0;
+// let soma03 = 0;
+// let soma04 = 0;
+// let soma05 = 0;
+// let soma06 = 0;
+// const resuldados = [];
+
+// while (contador <= vezes) {
+//     const backup = [];
+//     const dado = Math.ceil(Math.random() * 6);
+//     resuldados.push(dado);
+//     backup.push(dado);
+
+//     while (true) {
+//         if (backup.indexOf(1) >= 0) {
+//             soma01++;
+//             break;
+//         } else if (backup.indexOf(2) >= 0) {
+//             soma02++;
+//             break;
+//         } else if (backup.indexOf(3) >= 0) {
+//             soma03++;
+//             break;
+//         } else if (backup.indexOf(4) >= 0) {
+//             soma04++;
+//             break;
+//         } else if (backup.indexOf(5) >= 0) {
+//             soma05++;
+//             break;
+//         } else if (backup.indexOf(6) >= 0) {
+//             soma06++;
+//             break;
+//         } else {
+//             break;
+//         }
+//     }
+//     contador++;
+// }
+
+// console.log(resuldados);
+
+// console.log(`\nO número 1 apareceu: ${soma01} vezes.`);
+// console.log(`O número 2 apareceu: ${soma02} vezes.`);
+// console.log(`O número 3 apareceu: ${soma03} vezes.`);
+// console.log(`O número 4 apareceu: ${soma04} vezes.`);
+// console.log(`O número 5 apareceu: ${soma05} vezes.`);
+// console.log(`O número 6 apareceu: ${soma06} vezes.`);
+
+//// 3)
+console.log('Quantos alunos você quer cadastrar no sistema?');
+const qtdAlunos = +prompt(`R:`);
+const nomeAlunos = [];
+const notaAlunos = [];
 
 let contador = 1;
-let soma01 = 0;
-let soma02 = 0;
-let soma03 = 0;
-let soma04 = 0;
-let soma05 = 0;
-let soma06 = 0;
 
-const resuldados = [];
-while (contador <= vezes) {
-    let backup = [];
-    const dado = Math.floor(Math.random() * 6 + 1);
-    resuldados.push(dado);
-    backup.push(dado);
-
-    while (true) {
-        if (backup.indexOf(1) >= 0) {
-            soma01++;
-            break;
-        } else if (backup.indexOf(2) >= 0) {
-            soma02++;
-            break;
-        } else if (backup.indexOf(3) >= 0) {
-            soma03++;
-            break;
-        } else if (backup.indexOf(4) >= 0) {
-            soma04++;
-            break;
-        } else if (backup.indexOf(5) >= 0) {
-            soma05++;
-            break;
-        } else if (backup.indexOf(6) >= 0) {
-            soma06++;
-            break;
-        } else {
-            break;
-        }
-    }
+while (contador <= qtdAlunos) {
+    const aluno = prompt(`Digite o nome do ${contador}° aluno:`);
+    nomeAlunos.push(aluno);
+    const nota = +prompt(`Digite a nota do ${contador}° aluno:`);
+    notaAlunos.push(nota);
     contador++;
 }
 
-console.log(resuldados);
+while (contador <= nomeAlunos.length) {
+    console.log(`texte`);
+    contador++;
+}
 
-console.log(`\nO número 1 apareceu: ${soma01} vezes.`);
-console.log(`O número 2 apareceu: ${soma02} vezes.`);
-console.log(`O número 3 apareceu: ${soma03} vezes.`);
-console.log(`O número 4 apareceu: ${soma04} vezes.`);
-console.log(`O número 5 apareceu: ${soma05} vezes.`);
-console.log(`O número 6 apareceu: ${soma06} vezes.`);

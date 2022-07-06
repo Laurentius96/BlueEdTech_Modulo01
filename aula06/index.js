@@ -246,6 +246,7 @@ console.log(filmes09); // ["Jumanji", "Mad Max", "Mad Max", "Mad Max", "Interest
 console.log(`\nExemplo 11 - .sort()`);
 const filmes10 = ['Mad Max', 'Titanic', 'Jumanji', 'Aquaman'];
 filmes10.sort();
+console.log(filmes10); // ["Aquaman", "Jumanji", "Mad Max", "Titanic"]
 
 //// .reserse() - é uma função que inverte a ordem dos elementos de um array.
 
