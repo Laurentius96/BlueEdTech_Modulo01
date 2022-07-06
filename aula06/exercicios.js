@@ -1,3 +1,4 @@
+console.clear();
 const prompt = require('prompt-sync')();
 //=== Exercícios de Fixação ===\\
 
@@ -68,14 +69,15 @@ const prompt = require('prompt-sync')();
 // console.log(`O número 6 apareceu: ${soma06} vezes.`);
 
 //// 3)
-console.log('Quantos alunos você quer cadastrar no sistema?');
+console.log('\nQuantos alunos você quer cadastrar no sistema?');
 const qtdAlunos = +prompt(`R:`);
 const nomeAlunos = [];
 const notaAlunos = [];
-
 let contador = 1;
+let media = 0;
 
 while (contador <= qtdAlunos) {
+    console.log();
     const aluno = prompt(`Digite o nome do ${contador}° aluno:`);
     nomeAlunos.push(aluno);
     const nota = +prompt(`Digite a nota do ${contador}° aluno:`);
@@ -83,8 +85,24 @@ while (contador <= qtdAlunos) {
     contador++;
 }
 
-while (contador <= nomeAlunos.length) {
-    console.log(`texte`);
+contador = 0;
+const backupAlunos = nomeAlunos;
+const backupNotas = notaAlunos;
+
+while (true) {
+    const nome = backupAlunos.shift();
+    const nota = backupNotas.shift();
+
+    console.log(`A nota do(a) estudante ${nome} é: ${nota}`);
+
+    media += notaAlunos[contador];
+    console.log(media);
     contador++;
+
+    if (backupAlunos.length === 0) {
+        break;
+    }
 }
 
+console.log(media);
+console.log(`A média da turma é: ${media / notaAlunos.length}`);
