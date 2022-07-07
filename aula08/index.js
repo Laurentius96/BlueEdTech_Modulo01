@@ -55,7 +55,7 @@ for (let i = 0; i < 10; i++) {
 
 console.log('\nFOR indexado - Exemplo 02:');
 for (let i = 0; i < 10; i++) {
-  console.log(i);
+    console.log(i);
 }
 
 /*
@@ -68,38 +68,62 @@ As 3 expressões do FOR são opcionais, você pode não usar a expressão de ini
 console.log('\nFOR indexado - Exemplo 03:');
 let j = 0;
 
-for ( ; j < 9; j++) {
-  console.log(j);
+for (; j < 9; j++) {
+    console.log(j);
 }
 
 // Usando for sem testar uma condição (é necessário usar um break para não entrar em loop infinito)
 console.log('\nFOR indexado - Exemplo 04:');
 for (let i = 0; ; i++) {
-  console.log(i);
-  
-  if (i > 3) {
-    break;
-  }
+    console.log(i);
+
+    if (i > 3) {
+        break;
+    }
 }
 
 // Usando for sem incremento no final (o incremento é feito na execução do código)
 console.log('\nFOR indexado - Exemplo 05:');
 for (let i = 0; i < 9; ) {
-  console.log(i);
-  
-  i++;
+    console.log(i);
+
+    i++;
 }
 
 // Usando for sem nenhuma expressão
 console.log('\nFOR indexado - Exemplo 06:');
 let i = 0;
 
-for ( ; ; ) {
-  if (i > 3) {
-    break;
-  }
- 
+for (;;) {
+    if (i > 3) {
+        break;
+    }
+
     console.log(i);
 
     i++;
 }
+
+/* Laço de repetição - For of:
+
+  É uma maneira de usar a expressão for para percorrer objetos iterativos (a lista é um exemplo de objetivo iterativo), chamando assim a execução de uma declaração para o valor de cada objeto dentro dela.
+
+  Na documentação oficial você pode encontrar vários exemplos de objetos que podem ser usados para serem percorridos com o for.
+  
+  Para isso declaramos uma variável que será usada para percorrer o objeto iterativo, sendo que cada repetição irá executar o código que estiver dentro da declaração. Ela será repetida o número necessário de vezes para percorrer todo o objeto.
+  
+  A cada repetição essa variável vai assumir o valor do elemento dentro da lista, por exemplo:
+    
+    ** Note que a cada repetição, a variável filme recebeu o valor de um filme diferente que estava na lista filmes.
+
+  */
+console.log('\nFor of - Exemplo 07:\n');
+const filmes = ['Jurassic Park', 'O Senhor dos Aneis', 'Harry Potter'];
+
+for (const filme of filmes) {
+    console.log(filme);
+}
+
+/*
+
+*/
