@@ -1,0 +1,100 @@
+console.clear()
+const prompt = require("prompt-sync")();
+
+
+// // Fazendo uma repetição 10 vezes com o While:
+
+// let count = 0;
+
+// while (count < 10){
+//     console.log('Repetiu: ', count);
+//     count++
+//     // Outras formas de adicionar um valor à variável
+//     // count += 2
+//     // count = count + 2
+// }
+
+
+// // O mesmo resultado, utilizando for:
+// // Nesse caso, a delcaração de variável e o incremento ficam na mesma linha
+
+// for (let count = 0; count < 10; count++){
+//     console.log('Repetiu: ', count);
+// }
+
+
+
+// // Nesse caso meu usuário vai escolher a quantidade de repetições
+// // E a variável 'i' vai contar de 1 até a quantidade de vezes definida.
+// let repeticoes = +prompt('Quantas vezes quer repetir? ');
+// for (let i = 1; i <= repeticoes; i++){
+//     console.log(`Repetiu: ${i}`)
+// }
+
+
+// // As 3 expressões dentro do for são opcionais,
+// // Nesse exemplo eu não uso o incremento na expressão do for
+// // Ele pode ir dentro do código em algum lugar
+// // Isso seria útil no caso de eu ter uma condição em que eu posso incrementar valores diferentes
+// let repeticoes = +prompt('Quantas vezes quer repetir? ');
+// for (let i = 1; i <= repeticoes; ){
+//     console.log(`Repetiu: ${i}`);
+//     if (repeticoes < 100){
+//         i++
+//     } else {
+//         i += 10
+//     }
+// }
+
+
+
+
+
+//          FOR OF
+
+// // Iterando sobre os elementos de uma lista com o for indexado
+// let alunosC20 = ['Fellipe','Adriano','Gabriel','Raphael', 'Johni', 'Adriano', 'Caio', 'Everton'];
+
+// for (let i = 0; i < alunosC20.length; i++){
+//     console.log(alunosC20[i]);
+// }
+
+
+// // Mesma coisa, de uma maneira mais fácil:
+// let alunosC20 = ['Fellipe','Adriano','Gabriel','Raphael', 'Johni', 'Adriano', 'Caio', 'Everton'];
+// let nome = 'Gabriel Pereira';
+
+// for (let i of alunosC20){
+//     console.log(i);
+// }
+
+
+
+
+
+
+
+//      FOR IN
+
+// // Recebendo os índices de uma lista independente do tamanho
+// // Nesse caso, a variável 'i' é do tipo 'number'.
+// let alunosC20 = ['Fellipe','Adriano','Gabriel','Raphael', 'Johni', 'Adriano', 'Caio', 'Everton'];
+// for (let i = 0; i < alunosC20.length; i++){
+//     console.log(i);
+// }
+
+
+// // Mesma coisa, só que mais fácil
+// // Nesse caso, a variável 'i' é do tipo 'string'.
+// let alunosC20 = ['Fellipe','Adriano','Gabriel','Raphael', 'Johni', 'Adriano', 'Caio', 'Everton'];
+// let idades = [20, 16, 18, 30, 25, 23, 40, 22]
+
+// // for (let i in alunosC20){
+// //     console.log(i);
+// // }
+
+// // Acessando o mesmo índice de duas listas distintas.
+// for (let i in alunosC20){
+//     console.log(alunosC20[i]);
+//     console.log(idades[i]);
+// }
