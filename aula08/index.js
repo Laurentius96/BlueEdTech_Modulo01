@@ -116,14 +116,24 @@ for (;;) {
     
     ** Note que a cada repetição, a variável filme recebeu o valor de um filme diferente que estava na lista filmes.
 
-  */
+*/
+
 console.log('\nFor of - Exemplo 07:\n');
 const filmes = ['Jurassic Park', 'O Senhor dos Aneis', 'Harry Potter'];
 
 for (const filme of filmes) {
-    console.log(filme);
+  console.log(filme);
 }
 
-/*
+/* Laço de repetição - For in:
+
+Tem uma execução semelhante, porém, ao invés de interagir com o valor dos elementos, ele interage com os índices deles. Em outras palavras, ele interage com a posição do item dentro do objeto iterável.
 
 */
+
+console.log('\nFor in - Exemplo 08:\n');
+const filmes01 = ['Jurassic Park', 'O Senhor dos Aneis', 'Harry Potter'];
+
+for (const index in filmes01) {
+    console.log(index);
+}
