@@ -40,13 +40,14 @@ const prompt = require('prompt-sync')();
 //     console.log(i);
 // }
 
-////2)
+//// 2)
+// console.log(`Qual número fatorial você quer saber: `);
+// const escolha = +prompt(`R:`);
+// let fatorial = 1;
+// for (let i = 1; escolha >= i; i++) {
+//     fatorial = fatorial * i;
+// }
 
-console.log(`Qual número fatorial você quer saber: `);
-const escolha = +prompt(`R:`);
-let fatorial = 1;
-for (let i = 1; escolha >= i; i++) {
-    fatorial = fatorial * i;
-}
+// console.log(fatorial);
 
-console.log(fatorial);
+//// 4)

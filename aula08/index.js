@@ -122,7 +122,7 @@ console.log('\nFor of - Exemplo 07:\n');
 const filmes = ['Jurassic Park', 'O Senhor dos Aneis', 'Harry Potter'];
 
 for (const filme of filmes) {
-  console.log(filme);
+    console.log(filme);
 }
 
 /* Laço de repetição - For in:
