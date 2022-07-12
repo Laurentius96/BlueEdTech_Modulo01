@@ -13,93 +13,93 @@ const prompt = require('prompt-sync')();
 
 //// Exemplo 01:
 
-// console.log(`\nExemplo 01`);
-// function saudacao01() {
-//     console.log('Seja bem vindo(a) Bluemer!');
-//     console.log('Essa é a aula 11 do nosso curso.');
-//     console.log();
-// }
+console.log(`\nExemplo 01`);
+function saudacao01() {
+    console.log('Seja bem vindo(a) Bluemer!');
+    console.log('Essa é a aula 11 do nosso curso.');
+    console.log();
+}
 
-// saudacao01();
+saudacao01();
 
-// //// Dentro de uma função eu posso usar qualquer estrutura que aprendemos até agora (prompt, if, while, for...)
+//// Dentro de uma função eu posso usar qualquer estrutura que aprendemos até agora (prompt, if, while, for...)
 
-// console.log(`\nExemplo 02`);
-// function saudacao02() {
-//     const nome = prompt('Qual o seu nome? ');
-//     const idade = prompt('Qual a sua idade? ');
+console.log(`\nExemplo 02`);
+function saudacao02() {
+    const nome = prompt('Qual o seu nome? ');
+    const idade = prompt('Qual a sua idade? ');
 
-//     console.log();
-//     console.log(`Seja bem vindo(a) ${nome}!`);
+    console.log();
+    console.log(`Seja bem vindo(a) ${nome}!`);
 
-//     if (idade >= 18) {
-//         console.log('Você é maior de idade');
-//     } else {
-//         console.log('Você é menor de idade');
-//     }
+    if (idade >= 18) {
+        console.log('Você é maior de idade');
+    } else {
+        console.log('Você é menor de idade');
+    }
 
-//     console.log();
-// }
+    console.log();
+}
 
-// saudacao02();
+saudacao02();
 
-// /** Parâmetros em uma função:
+/** Parâmetros em uma função:
  
-//  * Uma função pode receber parâmetros na forma de argumentos, isso é, valores que serão passados para “dentro” da função que podem ser usados por ela para a execução do código.
+ * Uma função pode receber parâmetros na forma de argumentos, isso é, valores que serão passados para “dentro” da função que podem ser usados por ela para a execução do código.
  
-//  */
+ */
 
-// console.log(`\nExemplo 03`);
-// function saudacao(nome, anoNascimento) {
-//     const anoAtual = 2022;
-//     const idade = anoAtual - anoNascimento;
+console.log(`\nExemplo 03`);
+function saudacao(nome, anoNascimento) {
+    const anoAtual = 2022;
+    const idade = anoAtual - anoNascimento;
 
-//     console.log();
-//     console.log(`Seja bem vindo(a) ${nome}!`);
+    console.log();
+    console.log(`Seja bem vindo(a) ${nome}!`);
 
-//     if (idade >= 18) {
-//         console.log('Você é maior de idade');
-//     } else {
-//         console.log('Você é menor de idade');
-//     }
+    if (idade >= 18) {
+        console.log('Você é maior de idade');
+    } else {
+        console.log('Você é menor de idade');
+    }
 
-//     console.log();
-// }
+    console.log();
+}
 
-// const nomeDigitado = prompt('Qual o seu nome? ');
-// const nascimentoDigitado = prompt('Qual o seu ano de nascimento? ');
+const nomeDigitado = prompt('Qual o seu nome? ');
+const nascimentoDigitado = prompt('Qual o seu ano de nascimento? ');
 
-// saudacao(nomeDigitado, nascimentoDigitado);
+saudacao(nomeDigitado, nascimentoDigitado);
 
-// /** Os parâmetros predefinidos:
+/** Os parâmetros predefinidos:
  
-//  * Os parâmetros predefinidos de uma função permitem que parâmetros regulares sejam inicializados com valores iniciais caso nenhum valor seja passado. Ou seja, ao 'chamar' a função, caso o parâmetro não seja passado como argumento, ela assumirá o valor padrão que foi definido na sua declaração.
+ * Os parâmetros predefinidos de uma função permitem que parâmetros regulares sejam inicializados com valores iniciais caso nenhum valor seja passado. Ou seja, ao 'chamar' a função, caso o parâmetro não seja passado como argumento, ela assumirá o valor padrão que foi definido na sua declaração.
  
-// */
+*/
 
-// console.log(`\nExemplo 04`);
-// function saudacao04(anoNascimento, nome = 'Aluno(a)') {
-//     const anoAtual = 2022;
-//     const idade = anoAtual - anoNascimento;
+console.log(`\nExemplo 04`);
+function saudacao04(anoNascimento, nome = 'Aluno(a)') {
+    const anoAtual = 2022;
+    const idade = anoAtual - anoNascimento;
 
-//     console.log();
-//     console.log(`Seja bem vindo(a) ${nome}!`);
+    console.log();
+    console.log(`Seja bem vindo(a) ${nome}!`);
 
-//     if (idade >= 18) {
-//         console.log('Você é maior de idade');
-//     } else {
-//         console.log('Você é menor de idade');
-//     }
+    if (idade >= 18) {
+        console.log('Você é maior de idade');
+    } else {
+        console.log('Você é menor de idade');
+    }
 
-//     console.log();
-// }
+    console.log();
+}
 
-// const nascimentoDigitado04 = prompt('Qual o seu ano de nascimento? ');
-// const nomeDigitado04 = prompt(
-//     'Qual o seu nome (deixe em branco, caso queira)? ',
-// );
+const nascimentoDigitado04 = prompt('Qual o seu ano de nascimento? ');
+const nomeDigitado04 = prompt(
+    'Qual o seu nome (deixe em branco, caso queira)? ',
+);
 
-// saudacao04(nascimentoDigitado04, nomeDigitado04);
+saudacao04(nascimentoDigitado04, nomeDigitado04);
 
 /** Rotorno:
      
