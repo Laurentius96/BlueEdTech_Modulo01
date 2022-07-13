@@ -50,6 +50,8 @@ saudacao02();
  */
 
 console.log(`\nExemplo 03`);
+
+// Na declarção da função, temos os parâmetros (nome, anoNascimento)
 function saudacao(nome, anoNascimento) {
     const anoAtual = 2022;
     const idade = anoAtual - anoNascimento;
@@ -69,6 +71,7 @@ function saudacao(nome, anoNascimento) {
 const nomeDigitado = prompt('Qual o seu nome? ');
 const nascimentoDigitado = prompt('Qual o seu ano de nascimento? ');
 
+// Na execução da função, temos os argumentos, sendo 1 argumento para cada parâmetro
 saudacao(nomeDigitado, nascimentoDigitado);
 
 /** Os parâmetros predefinidos:
