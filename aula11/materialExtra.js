@@ -5,7 +5,7 @@ const prompt = require('prompt-sync')();
  
     * Uma expressão arrow function possui uma sintaxe mais curta quando comparada a uma expressão de função. É uma maneira de escrever funções com uma sintaxe diferente que pode tornar o seu código mais enxuto.
 
- */
+*/
 
 const somar = (a, b) => {
     const soma = a + b;
@@ -44,3 +44,28 @@ let lista = ['Blue', 'EdTech', 'Módulo 1'];
 lista.forEach(funcArray);
 
 ////É uma maneira simples de usar o for para listas, muito útil por trabalhar de uma vez com todos os elementos (índice, valor, e a própria lista)
+
+/** Material extra - Sintaxe de Espalhamento:
+ 
+    * A Spread syntax (...), também conhecido como spread operator, permite que um objeto iterável, como uma expressão de array ou uma string seja expandido para ser usado onde zero ou mais argumentos são esperados.
+
+    Dessa forma, você não precisa passar cada parâmetro individualmente, basta usar: expressão arrow function possui uma sintaxe mais curta quando comparada a uma expressão de função. É uma maneira de escrever funções com uma sintaxe diferente que pode tornar o seu código mais enxuto.
+
+    funcao(...lista)
+
+
+*/
+
+function somar(a, b, c) {
+    console.log('A soma é: ', a + b + c);
+}
+
+const numeros = [10, 15, 20];
+
+somar(...numeros);
+
+//// Vale ressaltar que a declaração pode ser usada fora do contexto de funções, como a seguir:
+
+const numeros01 = [10, 15, 20];
+
+const copiaDosNumeros = [...numeros01]; // [10, 15, 20]
