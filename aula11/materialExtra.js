@@ -7,18 +7,25 @@ const prompt = require('prompt-sync')();
 
 */
 
-const somar = (a, b) => {
+//FUCTION
+function somar01(a, b) {
+    return a + b;
+}
+
+//ARROW FUCTION
+const somar02 = (a, b) => {
     const soma = a + b;
     return soma;
 };
 
-console.log(somar(15, 20));
+console.log(somar01(15, 20));
+console.log(somar02(15, 20));
 
 //// Porém, se o corpo da função contiver apenas uma instrução que é retornada, podemos omitir as chaves { } e o return, escrevendo toda a função em uma única linha:
 
-const somar01 = (a, b) => a + b;
+const somar03 = (a, b) => a + b;
 
-console.log(somar01(15, 20));
+console.log(somar03(15, 20));
 
 /** Material extra - forEach:
  
@@ -69,3 +76,4 @@ somar(...numeros);
 const numeros01 = [10, 15, 20];
 
 const copiaDosNumeros = [...numeros01]; // [10, 15, 20]
+
