@@ -44,6 +44,15 @@ function adicionarFuncionario() {
     funcionarios.push(funcionario);
 }
 
+function contarCargo(array, cargo) {
+    let arrayTemporario = [];
+
+    array.forEach(elementoArray => {
+        // Checar se há algum objeto no arrayTemporario que contenha chabe e valor
+        //array.some() testa se pelo mesnos um do elementos no array passa no teste e retorna um booleano (tru ou false)
+        if
+    });
+}
 
 while (true) {
     adicionarFuncionario();
